@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block title %} <title> Update Employee Details</title>
+{%endblock%}
+{% block bodyblock %}
+{% block css %}{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/add.css' %}" />{%endblock%}
+
+<div class="container">
+    <h1>Add Employee</h1>
+    <form method="post">
+        {{form.as_p}}
+        <h3>Make sure default date type is (yyyy-mm-dd)</h3>
+        {%csrf_token%}
+        <input type="submit" value="Add" class="btn btn-success">
+
+    </form>
+    
+
+{%endblock%}
